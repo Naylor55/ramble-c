@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "${file}",
+        "-I", "D:/Application/ffmpeg-7.0.2-full_build-shared/include",
+        "-L", "D:/Application/ffmpeg-7.0.2-full_build-shared/lib",
+        "-lavcodec",
+        "-lavformat",
+        "-lavutil",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe"
+      ],
+      "group": "build",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ]
+}
